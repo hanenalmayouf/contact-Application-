@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyAccount"
+    android:background="@drawable/home">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="111dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="21dp"
+            android:src="@drawable/ic_call"
+            android:tint="#372626"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:text="Update user"
+            android:textColor="#FFF"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="111dp"
+            android:layout_marginTop="180dp"
+            app:shapeAppearanceOverlay="@style/image"
+            android:layout_marginEnd="100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_user_image"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/usernamedTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            style="@style/TextInputLayoutStyle"
+            app:endIconDrawable="@drawable/ic_person"
+            app:endIconMode="custom"
+            android:foregroundTint="@color/white"
+            android:textColorHint="#FFF"
+            app:hintTextColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/userImage"
+            app:layout_constraintStart_toStartOf="@+id/userImage"
+            app:layout_constraintTop_toBottomOf="@+id/userImage"
+            tools:layout_editor_absoluteX="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userName"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#FFF"
+                android:enabled="false"
+                android:hint="User Name"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#FFF"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            app:hintTextColor="@color/white"
+            style="@style/TextInputLayoutStyle"
+            android:textColorHint="#FFF"
+            app:passwordToggleEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/usernamedTIL"
+            tools:layout_editor_absoluteX="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:textColor="#FFF"
+                android:textSize="20dp"
+                android:inputType="textPassword"
+                android:textColorHint="#FFF"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            app:hintTextColor="@color/white"
+            style="@style/TextInputLayoutStyle"
+            android:textColorHint="#FFF"
+            app:layout_constraintTop_toBottomOf="@+id/passwordTextInputLayout"
+            tools:layout_editor_absoluteX="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:textColor="#FFF"
+                android:textSize="20dp"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#FFF"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/adressTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            app:hintTextColor="@color/white"
+            style="@style/TextInputLayoutStyle"
+            android:textColorHint="#FFF"
+            app:layout_constraintTop_toBottomOf="@+id/nameTextInputLayout"
+            tools:layout_editor_absoluteX="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:textColor="#FFF"
+                android:textSize="20dp"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#FFF"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/update_user"
+            android:layout_width="330dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="4dp"
+            android:text="Update"
+            android:textAllCaps="false"
+            app:cornerRadius="35dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            app:strokeWidth="1dp"
+            app:strokeColor="#FFF"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            app:layout_constraintEnd_toEndOf="@+id/adressTextInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/adressTextInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/adressTextInputLayout" >
+
+        </com.google.android.material.button.MaterialButton>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

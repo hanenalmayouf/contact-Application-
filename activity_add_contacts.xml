@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddContacts"
+    android:background="@drawable/home">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="111dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="21dp"
+            android:src="@drawable/ic_call"
+            android:tint="#372626"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:text="Add Contacts"
+            android:textColor="#FFF"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="111dp"
+            android:layout_marginTop="180dp"
+            app:shapeAppearanceOverlay="@style/image"
+            android:layout_marginEnd="100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_user_image"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            style="@style/TextInputLayoutStyle"
+            app:endIconMode="custom"
+            android:foregroundTint="@color/white"
+            android:textColorHint="#FFF"
+            app:hintTextColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/image"
+            app:layout_constraintStart_toStartOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@+id/image"
+            tools:layout_editor_absoluteX="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#FFF"
+                android:hint="Name"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#FFF"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/call_numberTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            style="@style/TextInputLayoutStyle"
+            app:endIconMode="custom"
+            android:foregroundTint="@color/white"
+            android:textColorHint="#FFF"
+            app:hintTextColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/nameTextInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/nameTextInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/nameTextInputLayout"
+            tools:layout_editor_absoluteX="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/call_number"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#FFF"
+                android:hint="Call Number"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#FFF"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_contacts"
+            android:layout_width="330dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="4dp"
+            android:text="Add"
+            android:textAllCaps="false"
+            app:cornerRadius="35dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            app:strokeWidth="1dp"
+            app:strokeColor="#FFF"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            app:layout_constraintEnd_toEndOf="@+id/call_numberTextInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/call_numberTextInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/call_numberTextInputLayout" >
+
+        </com.google.android.material.button.MaterialButton>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
